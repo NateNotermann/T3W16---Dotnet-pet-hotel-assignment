@@ -39,12 +39,12 @@ namespace pet_hotel.Controllers
         }
 
         [HttpPost]
-       public ObjectResult Post(Pet pet)
+       public Pet Post(Pet pet)
         {
             _context.Add(pet);
             _context.SaveChanges();
              StatusCode(201);
-            return Ok(pet);
+            return pet;
         }
 
         [HttpPut("{id}")]

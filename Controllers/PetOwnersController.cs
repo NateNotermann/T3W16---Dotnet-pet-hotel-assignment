@@ -43,7 +43,7 @@ namespace pet_hotel.Controllers
         {
             _context.Add(petOwner);
             _context.SaveChanges();
-             StatusCode(201);
+             StatusCode(200);
             return Ok(petOwner);
         }
 
