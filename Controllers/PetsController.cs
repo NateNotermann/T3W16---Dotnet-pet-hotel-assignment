@@ -62,9 +62,10 @@ namespace pet_hotel.Controllers
 
         [HttpPut("{id}/checkin")]
 
-         public Pet PutCheckIn(int id, Pet pet)
+         public Pet PutCheckIn(int id)
         {
-            pet.id = id;
+            
+            Pet pet = _context.Pets.SingleOrDefault( pet => pet.id == id );
             pet.checkedInAt = DateTime.Now;
             _context.Update(pet);
             _context.SaveChanges();
@@ -74,9 +75,9 @@ namespace pet_hotel.Controllers
        
         [HttpPut("{id}/checkout")]
 
-         public Pet PutCheckOut(int id, Pet pet)
+         public Pet PutCheckOut(int id)
         {
-            pet.id = id;
+            Pet pet = _context.Pets.SingleOrDefault( pet => pet.id == id );
             pet.checkedInAt = null;
             _context.Update(pet);
             _context.SaveChanges();

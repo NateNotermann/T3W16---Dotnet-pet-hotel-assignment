@@ -14,7 +14,9 @@ namespace pet_hotel
         Terrier,
         Boxer,
         Labrador,
-        Retriever
+        Retriever,
+        Cat
+
     }
     public enum PetColor
     {
@@ -22,7 +24,8 @@ namespace pet_hotel
         Black,
         Golden,
         Tricolor,
-        Spotted
+        Spotted,
+        Gradient,
     }
     public class Pet
     {
